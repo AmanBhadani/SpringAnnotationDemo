@@ -14,11 +14,15 @@ public class AppConfig {
     }
 
 
-    @Bean("moviex")
+    @Bean
     public Movie movie(){
         return new Movie(actor());
     }
 
+    @Bean(initMethod ="customInit",destroyMethod = "customDestroy")
+    public BeanLifecycleDemo demo(){
+        return new BeanLifecycleDemo();
+    }
 
 
 

@@ -1,6 +1,7 @@
 package com.stackroute;
 
 import com.stackroute.demo.AppConfig;
+import com.stackroute.demo.BeanLifecycleDemo;
 import com.stackroute.domain.Movie;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -10,8 +11,11 @@ public class App
     {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        Movie moviex = context.getBean("moviex",Movie.class);
-        System.out.println(moviex);
+        BeanLifecycleDemo demo = context.getBean(BeanLifecycleDemo.class);
+        Movie movie = context.getBean(Movie.class);
+        System.out.println(movie);
+        context.close();
+
 
     }
 }
