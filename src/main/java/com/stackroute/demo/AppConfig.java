@@ -24,6 +24,10 @@ public class AppConfig {
         return new BeanLifecycleDemo();
     }
 
+    @Bean
+    public BeanPostProcessorDemoBean postdemo(){
+        return new BeanPostProcessorDemoBean();
+    }
 
 
 
