@@ -10,14 +10,9 @@ public class App
     {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        Movie moviex = context.getBean("moviex",Movie.class);
+        Movie moviex = context.getBean(Movie.class);
+        //Movie moviey = context.getBean(Movie.class);
         System.out.println(moviex);
-        Movie moviey = context.getBean("moviey",Movie.class);
-        System.out.println(moviey);
-        System.out.println("For default : "+(moviex==moviex));
-        Movie moviez = context.getBean("moviez",Movie.class);
-        System.out.println("For output : "+(moviey==moviez));
-        System.out.println(moviez);
-
+        //System.out.println(moviey);
     }
 }

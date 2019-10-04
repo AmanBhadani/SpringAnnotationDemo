@@ -1,15 +1,18 @@
 package com.stackroute.domain;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Movie {
     private Actor actor;
 
     public Movie() {
     }
-
-    public Movie(Actor actor1) {
-        this.actor = actor1;
+    @Autowired
+    public Movie(Actor actor) {
+        this.actor = actor;
     }
 
 
@@ -17,8 +20,9 @@ public class Movie {
         return actor;
     }
 
-    public void setActor(Actor actor) {
-        this.actor = actor;
+    @Autowired
+    public void setActor(Actor setactor) {
+        this.actor = setactor;
     }
 
     @Override
